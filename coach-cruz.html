@@ -1,40 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coach Cruz - Fierce Fitness</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .bio-header {
+      font-size: 2.5em;
+      color: #2f5d26;
+      margin-bottom: 10px;
+    }
+    .bio-text {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .photo-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .photo-grid img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .pricing {
+      margin-top: 30px;
+      background: #e2f5dc;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+    }
+    .pricing h3 {
+      color: #2f5d26;
+    }
+    .btn {
+      background: red;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 20px 0;
+      display: inline-block;
+    }
+    .social {
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <div class="container">
       <h1>Coach Cruz</h1>
-      <a href="book-cruz.html" class="btn top">Book Now</a>
+      <a href="book-cruz.html" class="btn">Book Now</a>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
-      <h2>About Coach Cruz</h2>
-      <p>Coach Cruz is a seasoned technical boxing coach focused on competitive preparation and real-world self-defense. He works with youth, adults, and professional fighters alike.</p>
-      <h3>Training Paths:</h3>
-      <ul>
-        <li>Competition (Adult & Youth)</li>
-        <li>Self-Defense (Adult & Youth)</li>
-        <li>Pro Package (with Coach Alex)</li>
-      </ul>
-      
-      <h3>Connect with Coach Cruz</h3>
-      <p>
-        📸 Follow on Instagram:  
-        <a href="https://www.instagram.com/coachcruzboxinghead?igsh=MTZsN2lrcjc2cHl5cQ%3D%3D&utm_source=qr_USERNAME" target="_blank">@coachcruzboxinghead</a>
-      </p>    
+
+      <!-- Main Group Image -->
+      <img src="INSERT_YOUR_MAIN_IMAGE.jpg" alt="Coach Cruz with students" style="width:100%; max-width:800px; border-radius:10px;" />
+
+      <h2 class="bio-header">Coach Cruz</h2>
+      <p class="bio-text">
+        Has over 14 years experience in teaching the sweet science. Gaining experience on the All Army boxing team, you will train like an elite athlete, guaranteeing results in as little as 30 days!<br><br>
+        Book now, but only if you want success!
+      </p>
+
+      <!-- Photos Side-by-Side -->
+      <div class="photo-grid">
+        <img src="INSERT_SECOND_IMAGE.jpg" alt="Cruz training student" />
+        <img src="INSERT_THIRD_IMAGE.jpg" alt="Coach Cruz with belt" />
+      </div>
+
+      <!-- Pricing Table (Simple Version) -->
+      <div class="pricing">
+        <h3>Pricing</h3>
+        <table>
+          <tr>
+            <th>Daily - $20</th>
+            <th>Weekly - $50</th>
+            <th>Monthly - $130</th>
+          </tr>
+          <tr>
+            <td>1 Class</td>
+            <td>3 Classes</td>
+            <td>12 Classes</td>
+          </tr>
+          <tr>
+            <td>Boxing lesson</td>
+            <td>Boxing Training</td>
+            <td>Boxing Training</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Body Scan</td>
+            <td>Body Scan</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Fitness Training</td>
+            <td>Fitness Training</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Sparring</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Access to Events</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Instagram -->
+      <div class="social">
+        <h3>Connect with Coach Cruz</h3>
+        <p>
+          📸 Follow on Instagram: 
+          <a href="https://instagram.com/YOUR_USERNAME" target="_blank">@YOUR_USERNAME</a>
+        </p>
+      </div>
+
+      <!-- Book Now Button at Bottom -->
+      <a href="book-cruz.html" class="btn">Book Now</a>
+
     </div>
   </section>
 
   <footer>
-    <a href="book-cruz.html" class="btn bottom">Book Now</a>
+    <p>&copy; 2025 Fierce Fitness Concepts</p>
   </footer>
+
 </body>
 </html>
