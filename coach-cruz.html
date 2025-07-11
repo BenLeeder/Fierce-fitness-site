@@ -6,35 +6,49 @@
   <title>Coach Cruz - Fierce Fitness</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .top-image {
+      max-width: 400px;
+      width: 100%;
+      display: block;
+      margin: 30px auto;
+      border-radius: 12px;
+    }
     .bio-header {
-      font-size: 2.5em;
+      font-size: 2em;
+      text-align: center;
+      margin-top: 10px;
       color: #2f5d26;
-      margin-top: 30px;
-      margin-bottom: 10px;
     }
     .bio-text {
-      font-size: 1.2em;
+      text-align: center;
+      font-size: 1.1em;
       line-height: 1.6;
-      margin-bottom: 40px;
       max-width: 700px;
+      margin: 0 auto 40px auto;
     }
-    .grid-section {
+    .photo-row {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
-      justify-content: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
-    .grid-section img {
+    .photo-row img {
       width: 100%;
-      max-width: 350px;
-      border-radius: 8px;
+      max-width: 300px;
+      border-radius: 10px;
     }
     .pricing {
       background: #e2f5dc;
       padding: 20px;
-      border-radius: 8px;
-      max-width: 350px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
     }
     .pricing table {
       width: 100%;
@@ -42,11 +56,11 @@
     }
     .pricing th, .pricing td {
       border: 1px solid #ccc;
-      padding: 8px;
+      padding: 10px;
       text-align: center;
     }
     .pricing th {
-      background: #d0ebc2;
+      background-color: #cdeab9;
     }
     .btn {
       background: red;
@@ -54,10 +68,12 @@
       padding: 12px 25px;
       text-decoration: none;
       font-weight: bold;
-      margin: 20px 0;
-      display: inline-block;
+      margin: 30px auto;
+      display: block;
+      width: fit-content;
     }
     .social {
+      text-align: center;
       margin-top: 40px;
     }
   </style>
@@ -74,79 +90,81 @@
   <section class="section">
     <div class="container">
 
-      <!-- Main Group Image -->
-      <img src="FullSizeRender.jpeg" alt="Coach Cruz and students" style="width:100%; max-width:400px; display:block; margin:20px auto; border-radius:10px;" />
+      <!-- Top Image -->
+      <img src="images/group-photo.jpg" alt="Coach Cruz and students" class="top-image" />
 
       <!-- Bio -->
       <h2 class="bio-header">Coach Cruz</h2>
       <p class="bio-text">
-        Has over 14 years experience in teaching the sweet science. Gaining experience on the All Army boxing team, you will train like an elite athlete, guaranteeing results in as little as 30 days!<br><br>
-        Book now, but only if you want success!
+        Has over 14 years experience in teaching the sweet science of boxing. Gaining experience on the All Army boxing team, you will train like an elite athlete, guaranteeing results in as little as 30 days!<br><br>
+        Book now, and be ready for success!
       </p>
 
-      <!-- 2 photos + pricing side-by-side -->
-      <div class="grid-section">
-        <img src="images/action.jpg" alt="Coach Cruz Training" />
-        <div class="pricing">
-          <h3>Pricing</h3>
-          <table>
-            <tr>
-              <th>Daily<br>$20</th>
-              <th>Weekly<br>$50</th>
-              <th>Monthly<br>$130</th>
-            </tr>
-            <tr>
-              <td>1 Class</td>
-              <td>3 Classes</td>
-              <td>12 Classes</td>
-            </tr>
-            <tr>
-              <td>Boxing Lesson</td>
-              <td>Boxing Training</td>
-              <td>Boxing Training</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Body Scan</td>
-              <td>Body Scan</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>Fitness Training</td>
-              <td>Fitness Training</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Sparring</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td>Access to Events</td>
-            </tr>
-          </table>
-        </div>
-        <img src="images/belt.jpg" alt="Coach Cruz with Championship Belt" />
+      <!-- 2 Images Side by Side -->
+      <div class="photo-row">
+        <img src="images/action.jpg" alt="Training" />
+        <img src="images/belt.jpg" alt="Coach Cruz with Belt" />
       </div>
 
-      <!-- Instagram -->
+      <!-- Pricing Table -->
+      <div class="pricing">
+        <h3 style="text-align:center;">Pricing</h3>
+        <table>
+          <tr>
+            <th>Daily<br>$20</th>
+            <th>Weekly<br>$50</th>
+            <th>Monthly<br>$130</th>
+          </tr>
+          <tr>
+            <td>1 Class</td>
+            <td>3 Classes</td>
+            <td>12 Classes</td>
+          </tr>
+          <tr>
+            <td>Boxing Lesson</td>
+            <td>Boxing Training</td>
+            <td>Boxing Training</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Body Scan</td>
+            <td>Body Scan</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Fitness Training</td>
+            <td>Fitness Training</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Sparring</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Access to Events</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Instagram Link -->
       <div class="social">
         <h3>Connect with Coach Cruz</h3>
         <p>
-          📸 Follow on Instagram:  
+          📸 Follow on Instagram:
           <a href="https://instagram.com/YOUR_USERNAME" target="_blank">@YOUR_USERNAME</a>
         </p>
       </div>
 
-      <!-- Book Now Button at Bottom -->
+      <!-- Book Now Again -->
       <a href="book-cruz.html" class="btn">Book Now</a>
 
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Fierce Fitness Concepts</p>
+    <p style="text-align:center;">&copy; 2025 Fierce Fitness Concepts</p>
   </footer>
 
 </body>
