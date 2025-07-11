@@ -62,16 +62,23 @@
     .pricing th {
       background-color: #cdeab9;
     }
-    .btn {
-      background: red;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 30px auto;
-      display: block;
-      width: fit-content;
-    }
+   .btn {
+  background: red;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 30px auto;
+  display: block;
+  width: fit-content;
+  transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn:hover {
+    background: darkred;
+    transform: scale(1.05);
+    cursor: pointer;
+}
     .social {
       text-align: center;
       margin-top: 40px;
