@@ -9,34 +9,44 @@
     .bio-header {
       font-size: 2.5em;
       color: #2f5d26;
+      margin-top: 30px;
       margin-bottom: 10px;
     }
     .bio-text {
       font-size: 1.2em;
       line-height: 1.6;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      max-width: 700px;
     }
-    .photo-grid {
+    .grid-section {
       display: flex;
-      gap: 20px;
       flex-wrap: wrap;
-      margin-top: 30px;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 40px;
     }
-    .photo-grid img {
+    .grid-section img {
       width: 100%;
       max-width: 350px;
-      height: auto;
-      border-radius: 10px;
+      border-radius: 8px;
     }
     .pricing {
-      margin-top: 30px;
       background: #e2f5dc;
       padding: 20px;
       border-radius: 8px;
-      max-width: 600px;
+      max-width: 350px;
     }
-    .pricing h3 {
-      color: #2f5d26;
+    .pricing table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .pricing th, .pricing td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    .pricing th {
+      background: #d0ebc2;
     }
     .btn {
       background: red;
@@ -65,71 +75,66 @@
     <div class="container">
 
       <!-- Main Group Image -->
-      <img src="FullSizeRender.jpeg" alt="Coach Cruz with students" style="width:100%; max-width:800px; border-radius:10px;" />
+      <img src="images/group-photo.jpg" alt="Coach Cruz and students" style="width:100%; max-width:800px; display:block; margin:0 auto; border-radius:10px;" />
 
+      <!-- Bio -->
       <h2 class="bio-header">Coach Cruz</h2>
       <p class="bio-text">
         Has over 14 years experience in teaching the sweet science. Gaining experience on the All Army boxing team, you will train like an elite athlete, guaranteeing results in as little as 30 days!<br><br>
-        Book now, and get ready for success!
+        Book now, but only if you want success!
       </p>
 
-      <!-- Photos Side-by-Side -->
-      <div class="photo-grid">
-        <img src="IMG_0979.jpeg" alt="Cruz training student" />
-        <img src="Lambowithbelt.jpeg" alt="Coach Cruz with belt" />
-      </div>
-
-      <!-- Pricing Table (Simple Version) -->
-      <div class="pricing">
-        <h3>Pricing</h3>
-        <table>
-          <tr>
-            <th>Daily - $20</th>
-            
-            <th>Weekly - $50</th>
-            
-            <th>Monthly - $130</th>
-          </tr>
-          <tr>
-            <td>1 Class</td>
-            
-            <td>3 Classes</td>
-            
-            <td>12 Classes</td>
-          </tr>
-          <tr>
-            <td>Boxing lesson</td>
-            <td>Boxing Training</td>
-            <td>Boxing Training</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Body Scan</td>
-            <td>Body Scan</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Fitness Training</td>
-            <td>Fitness Training</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>Sparring</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>Access to Events</td>
-          </tr>
-        </table>
+      <!-- 2 photos + pricing side-by-side -->
+      <div class="grid-section">
+        <img src="images/action.jpg" alt="Coach Cruz Training" />
+        <div class="pricing">
+          <h3>Pricing</h3>
+          <table>
+            <tr>
+              <th>Daily<br>$20</th>
+              <th>Weekly<br>$50</th>
+              <th>Monthly<br>$130</th>
+            </tr>
+            <tr>
+              <td>1 Class</td>
+              <td>3 Classes</td>
+              <td>12 Classes</td>
+            </tr>
+            <tr>
+              <td>Boxing Lesson</td>
+              <td>Boxing Training</td>
+              <td>Boxing Training</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Body Scan</td>
+              <td>Body Scan</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Fitness Training</td>
+              <td>Fitness Training</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Sparring</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>Access to Events</td>
+            </tr>
+          </table>
+        </div>
+        <img src="images/belt.jpg" alt="Coach Cruz with Championship Belt" />
       </div>
 
       <!-- Instagram -->
       <div class="social">
         <h3>Connect with Coach Cruz</h3>
         <p>
-          📸 Follow on Instagram: 
+          📸 Follow on Instagram:  
           <a href="https://instagram.com/YOUR_USERNAME" target="_blank">@YOUR_USERNAME</a>
         </p>
       </div>
