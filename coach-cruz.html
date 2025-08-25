@@ -1,87 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coach Cruz - Fierce Fitness</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Coach Cruz</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 20px;
-    }
-    .top-image {
-      max-width: 400px;
-      width: 100%;
-      display: block;
-      margin: 30px auto;
-      border-radius: 12px;
-    }
-    .bio-header {
-      font-size: 2em;
       text-align: center;
-      margin-top: 10px;
-      color: #2f5d26;
     }
-    .bio-text {
-      text-align: center;
-      font-size: 1.1em;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto 40px auto;
+    h1 { margin-bottom: 30px; }
+
+    /* Contact row */
+    .contact-wrap {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 10px auto 30px;
     }
-    .photo-row {
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      background: #f7f7f7;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 10px 16px;
+    }
+    .contact-item a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    /* Packages */
+    .package-grid {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 30px;
-      margin-bottom: 30px;
+      flex-wrap: wrap;
+      margin-top: 10px;
     }
-    .photo-row img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-    }
-    .pricing {
-      background: #e2f5dc;
+    .package {
+      background: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 8px;
       padding: 20px;
-      border-radius: 10px;
-      max-width: 700px;
-      margin: 0 auto 40px auto;
+      max-width: 280px;
+      flex: 1 1 260px;
+      text-align: left;
     }
-    .pricing table {
-      width: 100%;
-      border-collapse: collapse;
+    .package h3 { margin-top: 0; }
+    .btn {
+      background: red;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+      border-radius: 5px;
+      transition: background 0.3s ease, transform 0.2s ease;
     }
-    .pricing th, .pricing td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
-    }
-    .pricing th {
-      background-color: #cdeab9;
-    }
-   .btn {
-  background: red;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 30px auto;
-  display: block;
-  width: fit-content;
-  transition: background 0.3s ease, transform 0.2s ease;
-  }
-
-  .btn:hover {
-    background: darkred;
-    transform: scale(1.05);
-    cursor: pointer;
-}
-    .social {
-      text-align: center;
-      margin-top: 40px;
+    .btn:hover {
+      background: darkred;
+      transform: scale(1.05);
+      cursor: pointer;
     }
   </style>
 </head>
@@ -89,89 +82,51 @@
 
   <header>
     <div class="container">
-      <h1>Coach Cruz</h1>
-      <a href="book-cruz.html" class="btn">Book Now</a>
+      <h1>Book with Coach Cruz</h1>
+
+      <!-- Contact row (email + Instagram) -->
+      <div class="contact-wrap" aria-label="Contact Coach Cruz">
+        <div class="contact-item" title="Email">
+          📧 <a href="mailto:CoachCruzFitness@outlook.com">CoachCruzFitness@outlook.com</a>
+        </div>
+        <div class="contact-item" title="Instagram">
+          📸 <a href="https://instagram.com/coachcruzboxinghead" target="_blank" rel="noopener">@coachcruzboxinghead</a>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="section">
     <div class="container">
+      <p><strong>Step 1:</strong> Book & Pay. <strong>Step 2:</strong> After payment, you’ll be redirected to schedule your first session.</p>
 
-      <!-- Top Image -->
-      <img src="FullSizeRender.jpeg" alt="Coach Cruz and students" class="top-image" />
+      <div class="package-grid">
+        <!-- Daily Training -->
+        <div class="package">
+          <h3>Daily Training</h3>
+          <p>One focused session—perfect for drop-ins or newcomers who want to sharpen skills fast.</p>
+          <a href="https://buy.stripe.com/aFaeVdbjg3bS6Tx9Qv4ow00" target="_blank" class="btn">Book Daily – $20</a>
+        </div>
 
-      <!-- Bio -->
-      <h2 class="bio-header">Coach Cruz</h2>
-      <p class="bio-text">
-        Has over 14 years experience in teaching the sweet science of boxing. Gaining experience on the All Army boxing team, you will train like an elite athlete, guaranteeing results in as little as 30 days!<br><br>
-       <strong> Book now, and be ready for success!</strong>
-      </p>
+        <!-- Weekly Training -->
+        <div class="package">
+          <h3>Weekly Training</h3>
+          <p>Three sessions in a week to build consistency, conditioning, and ring IQ quickly.</p>
+          <a href="https://buy.stripe.com/fZuaEXgDAcMs2Dh8Mr4ow01" target="_blank" class="btn">Book Weekly – $50</a>
+        </div>
 
-      <!-- 2 Images Side by Side -->
-      <div class="photo-row">
-        <img src="IMG_0979.jpeg" alt="Training" />
-        <img src="Lambowithbelt.jpeg" alt="Coach Cruz with Belt" />
+        <!-- Monthly Training -->
+        <div class="package">
+          <h3>Monthly Training</h3>
+          <p>12 sessions/month including conditioning and sparring prep for a full fighter experience.</p>
+          <a href="https://buy.stripe.com/fZu28r2MK6o46Tx0fV4ow02" target="_blank" class="btn">Book Monthly – $130</a>
+        </div>
       </div>
-
-      <!-- Pricing Table -->
-      <div class="pricing">
-        <h3 style="text-align:center;">Pricing</h3>
-        <table>
-          <tr>
-            <th>Daily<br>$20</th>
-            <th>Weekly<br>$50</th>
-            <th>Monthly<br>$130</th>
-          </tr>
-          <tr>
-            <td>1 Class</td>
-            <td>3 Classes</td>
-            <td>12 Classes</td>
-          </tr>
-          <tr>
-            <td>Boxing Lesson</td>
-            <td>Boxing Training</td>
-            <td>Boxing Training</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Body Scan</td>
-            <td>Body Scan</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>Fitness Training</td>
-            <td>Fitness Training</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>Sparring</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>Access to Events</td>
-          </tr>
-        </table>
-      </div>
-
-      <!-- Instagram Link -->
-      <div class="social">
-        <h3>Connect with Coach Cruz</h3>
-        <p>
-          📸 Follow on Instagram:
-          <a href="https://www.instagram.com/coachcruzboxinghead" target="_blank">@coachcruzboxinghead</a>
-        </p>
-      </div>
-
-      <!-- Book Now Again -->
-      <a href="book-cruz.html" class="btn">Book Now</a>
-
     </div>
   </section>
 
   <footer>
-    <p style="text-align:center;">&copy; 2025 Fierce Fitness Concepts</p>
+    <p>&copy; 2025 Fierce Fitness Concepts</p>
   </footer>
 
 </body>
