@@ -1,133 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Coach Cruz</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 { margin-bottom: 30px; }
+<!-- Contact row -->
+<div class="contact-wrap" aria-label="Contact Coach Cruz">
+  <div class="contact-item" title="Email">
+    📧 <a href="mailto:CoachCruzFitness@outlook.com">CoachCruzFitness@outlook.com</a>
+  </div>
+  <div class="contact-item" title="Instagram">
+    📸 <a href="https://instagram.com/coachcruzboxinghead" target="_blank" rel="noopener">@coachcruzboxinghead</a>
+  </div>
+</div>
 
-    /* Contact row */
-    .contact-wrap {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin: 10px auto 30px;
-    }
-    .contact-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1rem;
-      background: #f7f7f7;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
-      padding: 10px 16px;
-    }
-    .contact-item a {
-      color: inherit;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact-item a:hover {
-      text-decoration: underline;
-    }
-
-    /* Packages */
-    .package-grid {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-    .package {
-      background: #f8f8f8;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 20px;
-      max-width: 280px;
-      flex: 1 1 260px;
-      text-align: left;
-    }
-    .package h3 { margin-top: 0; }
-    .btn {
-      background: red;
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 15px;
-      border-radius: 5px;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-    .btn:hover {
-      background: darkred;
-      transform: scale(1.05);
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="container">
-      <h1>Book with Coach Cruz</h1>
-
-      <!-- Contact row (email + Instagram) -->
-      <div class="contact-wrap" aria-label="Contact Coach Cruz">
-        <div class="contact-item" title="Email">
-          📧 <a href="mailto:CoachCruzFitness@outlook.com">CoachCruzFitness@outlook.com</a>
-        </div>
-        <div class="contact-item" title="Instagram">
-          📸 <a href="https://instagram.com/coachcruzboxinghead" target="_blank" rel="noopener">@coachcruzboxinghead</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="section">
-    <div class="container">
-      <p><strong>Step 1:</strong> Book & Pay. <strong>Step 2:</strong> After payment, you’ll be redirected to schedule your first session.</p>
-
-      <div class="package-grid">
-        <!-- Daily Training -->
-        <div class="package">
-          <h3>Daily Training</h3>
-          <p>One focused session—perfect for drop-ins or newcomers who want to sharpen skills fast.</p>
-          <a href="https://buy.stripe.com/aFaeVdbjg3bS6Tx9Qv4ow00" target="_blank" class="btn">Book Daily – $20</a>
-        </div>
-
-        <!-- Weekly Training -->
-        <div class="package">
-          <h3>Weekly Training</h3>
-          <p>Three sessions in a week to build consistency, conditioning, and ring IQ quickly.</p>
-          <a href="https://buy.stripe.com/fZuaEXgDAcMs2Dh8Mr4ow01" target="_blank" class="btn">Book Weekly – $50</a>
-        </div>
-
-        <!-- Monthly Training -->
-        <div class="package">
-          <h3>Monthly Training</h3>
-          <p>12 sessions/month including conditioning and sparring prep for a full fighter experience.</p>
-          <a href="https://buy.stripe.com/fZu28r2MK6o46Tx0fV4ow02" target="_blank" class="btn">Book Monthly – $130</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Fierce Fitness Concepts</p>
-  </footer>
-
-</body>
-</html>
+<style>
+  .contact-wrap {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .contact-item {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  .contact-item a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+  }
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+</style>
