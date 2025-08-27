@@ -9,7 +9,8 @@
     .container{max-width:1000px;margin:0 auto;padding:20px}
     .top-image{max-width:400px;width:100%;display:block;margin:30px auto;border-radius:12px}
     .bio-header{font-size:2em;text-align:center;margin-top:10px;color:#2f5d26}
-    .bio-text{text-align:center;font-size:1.1em;line-height:1.6;max-width:700px;margin:0 auto 30px}
+    .bio-text{text-align:center;font-size:1.1em;line-height:1.6;max-width:700px;margin:0 auto 20px}
+    .address{font-size:1.1em;text-align:center;margin:10px auto 30px;font-weight:bold;color:#222}
     .photo-row{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;margin-bottom:30px}
     .photo-row img{width:100%;max-width:300px;border-radius:10px}
     .pricing{background:#e2f5dc;padding:20px;border-radius:10px;max-width:700px;margin:0 auto 40px}
@@ -19,7 +20,7 @@
     .btn{background:red;color:#fff;padding:12px 25px;text-decoration:none;font-weight:bold;margin:20px auto;display:block;width:fit-content;transition:background .3s ease,transform .2s ease;border-radius:6px}
     .btn:hover{background:darkred;transform:scale(1.05);cursor:pointer}
 
-    /* Contact row (now bottom, black font) */
+    /* Contact row (bottom, black font) */
     .contact-wrap{display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap;margin:24px 0}
     .contact-item{background:#f7f7f7;border:1px solid #e5e5e5;border-radius:8px;padding:10px 16px;font-size:1rem;color:#000}
     .contact-item a{color:#000;text-decoration:none;font-weight:600}
@@ -31,6 +32,8 @@
   <header>
     <div class="container">
       <h1>Train with Coach Cruz</h1>
+      <!-- Book Now button at top -->
+      <a href="book-cruz.html" class="btn">Book Now</a>
     </div>
   </header>
 
@@ -46,6 +49,9 @@
         Has over 14 years experience in teaching the sweet science. Gaining experience on the All Army boxing team, you will train like an elite athlete, guaranteeing results in as little as 30 days!<br><br>
         <strong>Book now, but only if you want success!</strong>
       </p>
+
+      <!-- Gym address -->
+      <p class="address">📍 6969 Hanging Moss Rd, Orlando, FL 32807</p>
 
       <!-- Two photos side-by-side -->
       <div class="photo-row">
@@ -95,10 +101,10 @@
         </table>
       </div>
 
-      <!-- Book Now -->
+      <!-- Book Now button at bottom -->
       <a href="book-cruz.html" class="btn">Book Now</a>
 
-      <!-- CONTACT (moved to bottom, black text) -->
+      <!-- CONTACT (bottom of page) -->
       <div class="contact-wrap" aria-label="Contact Coach Cruz">
         <div class="contact-item" title="Email">
           📧 <a href="mailto:CoachCruzFitness@outlook.com">CoachCruzFitness@outlook.com</a>
