@@ -6,188 +6,156 @@
   <title>Train with Coach Alex - Fierce Fitness Concepts</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; }
-
-    header {
-      background: black;
-      padding: 30px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    :root {
+      --gold: #ffd23b;
+      --red: #e51515;
+      --black: #000;
+      --pale: #fff9e6;
     }
-    .logo {
-      font-size: 2.5em;
-      font-weight: bold;
-      color: gold;
-      text-shadow: 2px 2px 0 red;
-      margin: 0;
-      flex: 1;
-      text-align: right; /* header text on right */
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#111; }
+
+    /* ===== Banner (matches mockup) ===== */
+    .banner {
+      background: var(--black);
+      color: var(--gold);
+    }
+    .banner-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 20px;
+      display: flex;
+      align-items: flex-end;        /* text baseline feel */
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 240px;            /* gives the header presence */
     }
     .alex-photo {
-      max-height: 220px;
-      flex: 0 0 auto;
+      height: 220px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,.35));
+    }
+    .logo {
+      margin: 0;
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-align: right;
+      color: var(--gold);
+      text-shadow: 2px 2px 0 var(--red);
     }
 
-    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-
-    .bio-text {
-      text-align: center;
-      font-size: 1.2em;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 20px auto;
-    }
-
-    .section-title {
-      text-align: center;
-      margin: 40px 0 20px;
-      font-size: 1.8em;
-      color: black;
-    }
-
-    .pricing {
-      background: #fff9e6; /* pale yellow */
-      border: 2px solid gold;
-      border-radius: 8px;
-      padding: 20px;
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
-    .pricing table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .pricing th, .pricing td {
-      border: 1px solid #ccc;
-      padding: 12px;
-      text-align: center;
-    }
-    .pricing th {
-      background: gold;
-      color: black;
-      font-weight: bold;
-    }
-
+    /* Buttons */
     .btn {
-      background: red;
-      color: white;
+      background: var(--red);
+      color: #fff;
       padding: 12px 25px;
       text-decoration: none;
       font-weight: bold;
-      margin: 20px auto;
-      display: block;
-      width: fit-content;
+      display: inline-block;
       border-radius: 6px;
-      transition: background 0.3s ease, transform 0.2s ease;
+      transition: background .25s, transform .2s;
     }
-    .btn:hover {
-      background: darkred;
-      transform: scale(1.05);
-      cursor: pointer;
-    }
+    .btn:hover { background:#a90f0f; transform: scale(1.05); }
 
+    /* Page layout */
+    .container { max-width: 1000px; margin: 0 auto; padding: 24px 20px; text-align:center; }
+
+    .bio { font-size: 1.1rem; line-height: 1.7; max-width: 760px; margin: 10px auto 24px; }
+
+    .section-title { font-size: 1.8rem; margin: 30px 0 14px; }
+
+    .pricing {
+      background: var(--pale);
+      border: 2px solid var(--gold);
+      border-radius: 10px;
+      padding: 18px;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      text-align: left;
+    }
+    .pricing table { width:100%; border-collapse: collapse; }
+    .pricing th, .pricing td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    .pricing th { background: var(--gold); color:#000; font-weight: 700; }
+
+    /* Contact row */
     .contact-wrap {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin: 24px 0;
+      display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin: 20px 0;
     }
     .contact-item {
-      background: #f7f7f7;
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
-      padding: 10px 16px;
-      font-size: 1rem;
-      color: #000;
+      background:#f7f7f7; border:1px solid #e5e5e5; border-radius:8px;
+      padding:10px 16px; font-size:1rem; color:#000;
     }
-    .contact-item a {
-      color: #000;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    .contact-item a { color:#000; text-decoration:none; font-weight:700; }
     .contact-item a:hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .banner-inner { align-items:center; flex-wrap:wrap; min-height: 0; }
+      .alex-photo { height: 170px; }
+      .logo { text-align:center; width:100%; }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <!-- Left side: Alex photo -->
-    <img src="alex.png" alt="Coach Alex pointing" class="alex-photo">
-    <!-- Right side: Logo -->
-    <h1 class="logo">Better Call Alex</h1>
+  <!-- Banner with photo left, title right -->
+  <header class="banner">
+    <div class="banner-inner">
+      <img src="images/alex.png" alt="Coach Alex pointing" class="alex-photo">
+      <h1 class="logo">Better Call Alex</h1>
+    </div>
   </header>
 
-  <!-- Book Now at Top -->
-  <a href="book-alex.html" class="btn">Book Now</a>
+  <!-- Top CTA centered under banner -->
+  <div class="container">
+    <a href="book-alex.html" class="btn">Book Now</a>
+  </div>
 
-  <section class="section">
-    <div class="container">
-      <!-- Bio -->
-      <p class="bio-text">
-        At 60 years old, Coach Alex brings over 25 years of expertise in fitness and wellness.
-        His programs focus on <strong>nutrition</strong>, <strong>functional strength</strong>, 
-        <strong>flexibility</strong>, <strong>athletic development</strong>, and 
-        <strong>longevity</strong>. Train with Alex to build lasting health, mobility, and confidence.
-      </p>
+  <section class="container">
+    <!-- Bio -->
+    <p class="bio">
+      At 60 years old, Coach Alex brings over 25 years of expertise in fitness and wellness.
+      His programs focus on <strong>nutrition</strong>, <strong>functional strength</strong>,
+      <strong>flexibility</strong>, <strong>athletic development</strong>, and
+      <strong>longevity</strong>. Train with Alex to build lasting health, mobility, and confidence.
+    </p>
 
-      <!-- Private Lessons -->
-      <h2 class="section-title">Private Lessons</h2>
-      <div class="pricing">
-        <table>
-          <tr>
-            <th>Session</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>1-on-1 Training</td>
-            <td>$XX</td>
-          </tr>
-          <tr>
-            <td>10 Session Package</td>
-            <td>$XXX</td>
-          </tr>
-        </table>
-      </div>
+    <!-- Private Lessons -->
+    <h2 class="section-title">Private Lessons</h2>
+    <div class="pricing">
+      <table>
+        <tr><th>Session</th><th>Price</th></tr>
+        <tr><td>1-on-1 Training</td><td>$XX</td></tr>
+        <tr><td>10 Session Package</td><td>$XXX</td></tr>
+      </table>
+    </div>
 
-      <!-- Group Lessons -->
-      <h2 class="section-title">Group Lessons</h2>
-      <div class="pricing">
-        <table>
-          <tr>
-            <th>Group Type</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>Small Group (2-4 people)</td>
-            <td>$XX</td>
-          </tr>
-          <tr>
-            <td>Large Group (5+ people)</td>
-            <td>$XX</td>
-          </tr>
-        </table>
-      </div>
+    <!-- Group Lessons -->
+    <h2 class="section-title">Group Lessons</h2>
+    <div class="pricing">
+      <table>
+        <tr><th>Group Type</th><th>Price</th></tr>
+        <tr><td>Small Group (2–4 people)</td><td>$XX</td></tr>
+        <tr><td>Large Group (5+ people)</td><td>$XX</td></tr>
+      </table>
+    </div>
 
-      <!-- Book Now at Bottom -->
-      <a href="book-alex.html" class="btn">Book Now</a>
+    <!-- Bottom CTA -->
+    <a href="book-alex.html" class="btn">Book Now</a>
 
-      <!-- Contact Info -->
-      <div class="contact-wrap">
-        <div class="contact-item">
-          📞 <a href="tel:4072020700">407-202-0700</a>
-        </div>
-        <div class="contact-item">
-          📧 <a href="mailto:alexfierce70@gmail.com">alexfierce70@gmail.com</a>
-        </div>
-      </div>
+    <!-- Contact -->
+    <div class="contact-wrap">
+      <div class="contact-item">📞 <a href="tel:4072020700">407-202-0700</a></div>
+      <div class="contact-item">📧 <a href="mailto:alexfierce70@gmail.com">alexfierce70@gmail.com</a></div>
     </div>
   </section>
 
-  <footer>
-    <p style="text-align:center;">&copy; 2025 Fierce Fitness Concepts</p>
+  <footer class="container" style="padding-bottom:40px;">
+    &copy; 2025 Fierce Fitness Concepts
   </footer>
 
 </body>
