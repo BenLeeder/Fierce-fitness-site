@@ -2,161 +2,243 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Train with Coach Alex - Fierce Fitness Concepts</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Better Call Alex – Fierce Fitness Concepts</title>
+
+  <!-- Script/calligraphic display fonts close to the mockup -->
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Lobster+Two:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --gold: #ffd23b;
-      --red: #e51515;
-      --black: #000;
-      --pale: #fff9e6;
-    }
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#111; }
-
-    /* ===== Banner (matches mockup) ===== */
-    .banner {
-      background: var(--black);
-      color: var(--gold);
-    }
-    .banner-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 10px 20px;
-      display: flex;
-      align-items: flex-end;        /* text baseline feel */
-      justify-content: space-between;
-      gap: 20px;
-      min-height: 240px;            /* gives the header presence */
-    }
-    .alex-photo {
-      height: 220px;
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,.35));
-    }
-    .logo {
-      margin: 0;
-      font-size: 2.8rem;
-      font-weight: 800;
-      text-align: right;
-      color: var(--gold);
-      text-shadow: 2px 2px 0 var(--red);
+    :root{
+      --gold:#ffd23b;
+      --gold-deep:#ffcc00;
+      --red:#e21c17;
+      --black:#000;
+      --ink:#111;
+      --grid-gap:28px;
+      --table-border:#f5cc2e;
     }
 
-    /* Buttons */
-    .btn {
-      background: var(--red);
-      color: #fff;
-      padding: 12px 25px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      border-radius: 6px;
-      transition: background .25s, transform .2s;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:#fff;
+      color:var(--ink);
+      font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.6;
     }
-    .btn:hover { background:#a90f0f; transform: scale(1.05); }
 
-    /* Page layout */
-    .container { max-width: 1000px; margin: 0 auto; padding: 24px 20px; text-align:center; }
-
-    .bio { font-size: 1.1rem; line-height: 1.7; max-width: 760px; margin: 10px auto 24px; }
-
-    .section-title { font-size: 1.8rem; margin: 30px 0 14px; }
-
-    .pricing {
-      background: var(--pale);
-      border: 2px solid var(--gold);
-      border-radius: 10px;
-      padding: 18px;
-      max-width: 760px;
-      margin: 0 auto 36px;
-      text-align: left;
+    /* ======= PAGE WRAPPER (white poster look) ======= */
+    .page{
+      max-width:1100px;
+      margin:0 auto;
+      padding:24px 18px 40px;
+      background:#fff;
     }
-    .pricing table { width:100%; border-collapse: collapse; }
-    .pricing th, .pricing td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: center;
-    }
-    .pricing th { background: var(--gold); color:#000; font-weight: 700; }
 
-    /* Contact row */
-    .contact-wrap {
-      display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin: 20px 0;
+    /* ======= HERO ROW (Alex photo left, banner text right) ======= */
+    .hero{
+      display:grid;
+      grid-template-columns: 360px 1fr;
+      align-items:start;
+      gap:var(--grid-gap);
+      margin-bottom:8px;
     }
-    .contact-item {
-      background:#f7f7f7; border:1px solid #e5e5e5; border-radius:8px;
-      padding:10px 16px; font-size:1rem; color:#000;
+    .hero .alex{
+      align-self:start;
+      justify-self:start;
+      width:360px;
+      max-width:100%;
+      height:auto;
+      object-fit:contain;
+      /* slight lift like cut-out */
+      filter: drop-shadow(0 6px 18px rgba(0,0,0,.18));
     }
-    .contact-item a { color:#000; text-decoration:none; font-weight:700; }
-    .contact-item a:hover { text-decoration: underline; }
+    .banner{
+      padding-top:8px;
+      text-align:left;
+    }
+    .banner .bc{ /* "Better Call" */
+      font-family:"Yellowtail", cursive;
+      font-size: clamp(42px,7.2vw,86px);
+      line-height:.95;
+      color:var(--gold);
+      margin:0;
+      letter-spacing:.5px;
+      -webkit-text-stroke:0px #000;
+      text-shadow:
+        0.02em 0.02em 0 #0002,
+        0.06em 0.06em 0 #0002;
+    }
+    .banner .alex-word{ /* "Alex" big red script */
+      font-family:"Lobster Two", cursive;
+      font-size: clamp(72px,9.6vw,120px);
+      line-height:.9;
+      color:var(--red);
+      margin:0 0 4px 0;
+      letter-spacing:.5px;
+      text-shadow:
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff,
+        2px 2px 0 #fff;
+    }
 
-    /* Responsive */
-    @media (max-width: 720px) {
-      .banner-inner { align-items:center; flex-wrap:wrap; min-height: 0; }
-      .alex-photo { height: 170px; }
-      .logo { text-align:center; width:100%; }
+    /* ======= BODY GRID (two columns like the mockup) ======= */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:var(--grid-gap);
+      align-items:start;
+      margin-top:8px;
+    }
+
+    /* Bio paragraph (right column) */
+    .bio{
+      margin-top:8px;
+      font-size:clamp(16px,1.9vw,18px);
+    }
+    .bio strong{font-weight:800}
+
+    /* Section titles */
+    .h2{
+      font-weight:800;
+      font-size:clamp(22px,2.6vw,28px);
+      margin:8px 0 10px;
+    }
+
+    /* Pricing cards mimic the yellow framed tables */
+    .card{
+      border:3px solid var(--table-border);
+      border-radius:10px;
+      padding:10px;
+      background:#fff;
+      width:100%;
+    }
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      font-size:clamp(15px,1.85vw,17px);
+    }
+    th, td{
+      border:2px solid var(--table-border);
+      padding:14px 10px;
+      text-align:center;
+      background:#fffaf0;
+    }
+    th{
+      background:var(--gold);
+      color:#000;
+      font-weight:800;
+    }
+
+    /* Red Book Now button (left column under private lessons) */
+    .cta{
+      margin-top:16px;
+      display:inline-block;
+      background:var(--red);
+      color:#fff;
+      font-weight:800;
+      text-decoration:none;
+      padding:14px 26px;
+      border-radius:10px;
+      box-shadow:0 6px 0 #b5100f;
+      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+    }
+    .cta:hover{ transform:translateY(1px); filter:brightness(.96) }
+    .cta:active{ transform:translateY(3px); box-shadow:0 3px 0 #b5100f }
+
+    /* Bottom email strip */
+    .email-strip{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-top:18px;
+      font-weight:800;
+      font-size:clamp(16px,1.9vw,18px);
+    }
+    .email-icon{
+      width:26px;height:26px;border-radius:6px;
+      background:#222; display:inline-flex; align-items:center; justify-content:center;
+      color:#fff; font-size:14px;
+    }
+    .email-strip a{ color:#000; text-decoration:none }
+    .email-strip a:hover{ text-decoration:underline }
+
+    /* Responsive stack */
+    @media (max-width: 840px){
+      .hero{ grid-template-columns: 1fr; }
+      .hero .alex{ justify-self:center; }
+      .banner{ text-align:center; }
+      .grid{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 <body>
+  <main class="page">
 
-  <!-- Banner with photo left, title right -->
-  <header class="banner">
-    <div class="banner-inner">
-      <img src="images/alex.png" alt="Coach Alex pointing" class="alex-photo">
-      <h1 class="logo">Better Call Alex</h1>
-    </div>
-  </header>
+    <!-- HERO: Alex photo (left) + Better Call Alex (right) -->
+    <section class="hero">
+      <img src="alex.png" alt="Coach Alex pointing" class="alex">
+      <div class="banner">
+        <h1 class="bc">Better<br>Call</h1>
+        <h2 class="alex-word">Alex</h2>
+      </div>
+    </section>
 
-  <!-- Top CTA centered under banner -->
-  <div class="container">
-    <a href="book-alex.html" class="btn">Book Now</a>
-  </div>
+    <!-- TWO-COLUMN BODY like the mockup -->
+    <section class="grid">
+      <!-- LEFT COLUMN -->
+      <div>
+        <h3 class="h2">Private Lessons</h3>
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>Session</th><th>Price</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1-on-1 Training</td><td>$XX</td></tr>
+              <tr><td>10 Session Package</td><td>$XXX</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-  <section class="container">
-    <!-- Bio -->
-    <p class="bio">
-      At 60 years old, Coach Alex brings over 25 years of expertise in fitness and wellness.
-      His programs focus on <strong>nutrition</strong>, <strong>functional strength</strong>,
-      <strong>flexibility</strong>, <strong>athletic development</strong>, and
-      <strong>longevity</strong>. Train with Alex to build lasting health, mobility, and confidence.
-    </p>
+        <!-- Red Book Now button under left table -->
+        <a href="book-alex.html" class="cta">Book Now</a>
 
-    <!-- Private Lessons -->
-    <h2 class="section-title">Private Lessons</h2>
-    <div class="pricing">
-      <table>
-        <tr><th>Session</th><th>Price</th></tr>
-        <tr><td>1-on-1 Training</td><td>$XX</td></tr>
-        <tr><td>10 Session Package</td><td>$XXX</td></tr>
-      </table>
-    </div>
+        <!-- Bottom email strip -->
+        <div class="email-strip">
+          <span class="email-icon">✉</span>
+          <a href="mailto:alexfierce70@gmail.com">alexfierce70@gmail.com</a>
+        </div>
+      </div>
 
-    <!-- Group Lessons -->
-    <h2 class="section-title">Group Lessons</h2>
-    <div class="pricing">
-      <table>
-        <tr><th>Group Type</th><th>Price</th></tr>
-        <tr><td>Small Group (2–4 people)</td><td>$XX</td></tr>
-        <tr><td>Large Group (5+ people)</td><td>$XX</td></tr>
-      </table>
-    </div>
+      <!-- RIGHT COLUMN -->
+      <div>
+        <!-- Bio paragraph -->
+        <p class="bio">
+          At <strong>60 years old</strong>, Coach Alex brings over <strong>25 years</strong> of expertise in fitness
+          and wellness. His programs focus on <strong>nutrition</strong>, <strong>functional strength</strong>,
+          <strong>flexibility</strong>, <strong>athletic development</strong>, and <strong>longevity</strong>.
+          Train with Alex to build lasting health, mobility, and confidence.
+        </p>
 
-    <!-- Bottom CTA -->
-    <a href="book-alex.html" class="btn">Book Now</a>
+        <h3 class="h2">Book Now</h3>
+        <div class="card">
+          <table>
+            <thead>
+              <tr><th>Group Lessons</th><th>Price</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Small Group (2–4 people)</td><td>$XX</td></tr>
+              <tr><td>Large Group (5+ people)</td><td>$XX</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-    <!-- Contact -->
-    <div class="contact-wrap">
-      <div class="contact-item">📞 <a href="tel:4072020700">407-202-0700</a></div>
-      <div class="contact-item">📧 <a href="mailto:alexfierce70@gmail.com">alexfierce70@gmail.com</a></div>
-    </div>
-  </section>
-
-  <footer class="container" style="padding-bottom:40px;">
-    &copy; 2025 Fierce Fitness Concepts
-  </footer>
-
+  </main>
 </body>
 </html>
