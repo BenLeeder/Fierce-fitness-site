@@ -120,33 +120,96 @@
         <span class="red">Alex</span>
       </div>
       <p class="bio">
-        At <strong>60 years old</strong>, Coach Alex brings over <strong>25 years</strong> of expertise in fitness and wellness. 
+        Coach Alex brings over <strong>25 years</strong> of expertise in fitness and wellness. 
         His programs focus on <strong>nutrition, functional strength, flexibility, athletic development,</strong> and <strong>longevity</strong>. 
         Train with Alex to build lasting health, mobility, and confidence.
       </p>
     </div>
   </section>
+ 
+  <style>
+  /* Desktop layout (default) */
+  .lesson-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 40px 0;
+  }
+  .lesson-box {
+    flex: 1;
+    background: #fffbea;
+    border: 2px solid #f2c200;
+    border-radius: 6px;
+    padding: 20px;
+  }
+  .lesson-box h3 {
+    margin-bottom: 15px;
+  }
+  .lesson-box table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .lesson-box th {
+    background: #ffd700;
+    text-align: left;
+    padding: 8px;
+  }
+  .lesson-box td {
+    padding: 8px;
+    border-top: 1px solid #ccc;
+  }
+  .lesson-box .book-btn {
+    display: block;
+    background: red;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
-  <div class="content">
-    <div class="card">
-      <h3>Private Lessons</h3>
-      <table>
+  /* Mobile layout */
+  @media (max-width: 768px) {
+    .lesson-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+</style>
+
+<section class="lesson-section">
+  <!-- Private Lessons -->
+  <div class="lesson-box">
+    <h3>Private Lessons</h3>
+    <table>
+      <thead>
         <tr><th>Session</th><th>Price</th></tr>
+      </thead>
+      <tbody>
         <tr><td>1-on-1 Training</td><td>$XX</td></tr>
         <tr><td>10 Session Package</td><td>$XXX</td></tr>
-      </table>
-      <a href="#" class="book-btn">Book Now</a>
-    </div>
+      </tbody>
+    </table>
+    <a href="#contact" class="book-btn">Book Now</a>
+  </div>
 
-    <div class="card">
-      <h3>Group Lessons</h3>
-      <table>
+  <!-- Group Lessons -->
+  <div class="lesson-box">
+    <h3>Group Lessons</h3>
+    <table>
+      <thead>
         <tr><th>Group Lessons</th><th>Price</th></tr>
+      </thead>
+      <tbody>
         <tr><td>Small Group (2–4 people)</td><td>$XX</td></tr>
         <tr><td>Large Group (5+ people)</td><td>$XX</td></tr>
-      </table>
-    </div>
+      </tbody>
+    </table>
+    <a href="#contact" class="book-btn">Book Now</a>
   </div>
+</section>
 
   <div class="contact">
     <a href="tel:4072020700">📞 407-202-0700</a>
