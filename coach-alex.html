@@ -30,15 +30,31 @@
 .banner {
   margin-left: -80px;
 }
-    .banner h2 {
-      font-size: 100px;
-      font-weight: bold;
-      font-family: 'Brush Script MT', cursive;
-      color: red;
-      text-shadow: 3px 3px 6px #000;
-      transform: rotate(-10deg);
-      margin: 0;
-    }
+    .banner h1, .banner h2 {
+  font-family: 'Lobster', cursive; /* matches “Alex” style */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4); /* gives that depth */
+}
+
+.banner h1 {
+  color: #FFD700; /* gold for “Better Call” */
+  font-size: 70px; /* larger for visibility */
+  line-height: 1.1;
+  transform: skew(-5deg);
+  margin-bottom: 10px;
+}
+
+.banner h2 {
+  color: #ff0000; /* red for Alex */
+  font-size: 110px; /* slightly oversized for drama */
+  transform: skew(-5deg);
+  margin-top: -10px;
+}
+
+/* enlarge the entire banner container */
+.banner {
+  transform: translateX(-40px);
+  scale: 1.2;
+}
 
     /* BIO */
     .bio {
