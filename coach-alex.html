@@ -14,28 +14,22 @@
       color: #000;
     }
 
-    /* HERO SECTION */
     .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      margin: 40px auto;
-      flex-wrap: wrap;
-   
-    .hero img {
-      width: 10%;         /* he’ll take 40% of screen width */
-      max-width: 550px;   /* don’t let him exceed this */
-      height: auto;
-    }
-    .banner h1 {
-      font-size: 80px;
-      font-family: 'Brush Script MT', cursive;
-      color: #FFD700;
-      text-shadow: 3px 3px 6px #000;
-      transform: rotate(-10deg);
-      margin: 0;
-    }
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;             /* controls space between Alex and text */
+  margin-left: 5%;       /* centers both on page */
+  margin-top: 20px;
+}
+.hero img {
+  width: 40%;
+  max-width: 500px;
+  height: auto;
+}
+.banner {
+  transform: translateX(-50px);   /* pulls the banner closer to Alex */
+}
     .banner h2 {
       font-size: 100px;
       font-weight: bold;
