@@ -1,133 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Better Call Alex – Fierce Fitness Concepts</title>
 
-body { font-family: Arial, sans-serif; margin: 0; background: #fff; color: #000; }
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
-/* --- HERO --- */
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO SECTION */
 .hero {
-  display: flex; align-items: flex-start; justify-content: flex-start;
-  gap: 40px; margin: 40px 5%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+  margin: 40px 5%;
 }
 .alex-photo {
-  width: 45%; max-width: 550px; height: auto;
+  width: 45%;
+  max-width: 550px;
+  height: auto;
+  filter: drop-shadow(5px 5px 10px rgba(255,255,255,0.3));
 }
 .banner h1, .banner h2 {
-  font-family: 'Lobster', cursive; line-height: 1;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+  font-family: 'Lobster', cursive;
+  line-height: 1;
+  transform: skew(-5deg);
 }
 .banner h1 {
-  color: #FFD700; font-size: 80px; transform: skew(-5deg);
+  color: #FFD700;
+  font-size: 90px;
+  text-shadow: 
+    2px 2px 8px rgba(0,0,0,0.9),
+    0 0 15px #FFD700,
+    0 0 25px #FFD700;
 }
 .banner h2 {
-  color: #FF0000; font-size: 130px; transform: skew(-5deg);
+  color: #FF0000;
+  font-size: 130px;
+  text-shadow:
+    2px 2px 8px rgba(0,0,0,1),
+    0 0 10px #FF0000,
+    0 0 25px #FF0000;
+  margin-top: -10px;
 }
 .banner .bio {
-  font-size: 18px; line-height: 1.6; max-width: 520px; margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin-top: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
 }
 
-/* --- LESSONS --- */
+/* LESSONS */
 .lessons {
-  display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
-  margin: 60px auto; width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin: 60px auto;
+  width: 90%;
 }
 .lesson-card {
-  background: #fff8dc; border: 2px solid #FFD700; border-radius: 10px;
-  padding: 20px; width: 340px; text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: rgba(20,20,20,0.85);
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  padding: 20px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255,215,0,0.3);
 }
-.lesson-card h3 { font-size: 22px; margin-bottom: 15px; }
+.lesson-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #FFD700;
+  text-shadow: 0 0 6px rgba(255,215,0,0.5);
+}
 .lesson-card table {
-  width: 100%; border-collapse: collapse; margin-bottom: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
 }
 .lesson-card th {
-  background: #FFD700; padding: 10px; font-weight: bold;
+  background: #FFD700;
+  color: #000;
+  padding: 10px;
+  font-weight: bold;
 }
 .lesson-card td {
-  padding: 10px; border-bottom: 1px solid #ddd;
+  padding: 10px;
+  border-bottom: 1px solid #444;
 }
 .book-btn {
-  display: inline-block; background: #FF0000; color: #fff;
-  padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;
+  display: inline-block;
+  background: #FF0000;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255,0,0,0.6);
 }
-.book-btn:hover { background: #cc0000; }
+.book-btn:hover {
+  background: #cc0000;
+  box-shadow: 0 0 15px rgba(255,0,0,0.9);
+}
 
-/* --- CONTACT --- */
+/* CONTACT SECTION */
 .contact {
-  text-align: center; padding: 20px; margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
 .contact a {
-  display: inline-flex; align-items: center; justify-content: center;
-  background: #fff8dc; border: 1px solid #FFD700; border-radius: 8px;
-  padding: 10px 20px; margin: 5px; color: #000; text-decoration: none; font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+  border: 1px solid #FFD700;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 5px;
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  text-shadow: 0 0 4px rgba(255,215,0,0.5);
 }
 .contact a:hover {
-  background: #FFD700; color: #000;
+  background: #FFD700;
+  color: #000;
 }
 
-/* --- MOBILE --- */
+/* MOBILE STYLING */
 @media (max-width: 768px) {
-  .hero { flex-direction: column; align-items: center; text-align: center; }
-  .alex-photo { width: 80%; max-width: 400px; }
-  .banner h1 { font-size: 60px; }
-  .banner h2 { font-size: 100px; }
-  .lessons { flex-direction: column; align-items: center; }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .alex-photo {
+    width: 80%;
+    max-width: 400px;
+  }
+  .banner h1 {
+    font-size: 60px;
+  }
+  .banner h2 {
+    font-size: 100px;
+  }
+  .lessons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+</style>
 </head>
+
 <body>
-<main class="page">
-  <!-- HERO -->
-  <section class="hero">
-    <img src="Alex.png" alt="Coach Alex pointing" class="alex-photo">
-    <div class="banner">
-      <h1>Better<br>Call</h1>
-      <h2>Alex</h2>
-      <p class="bio">
-        At <strong>60 years old</strong>, Coach Alex brings over <strong>25 years</strong> of expertise in fitness and wellness.  
-        His programs focus on <strong>nutrition, functional strength, flexibility, athletic development, and longevity.</strong>  
-        Train with Alex to build lasting health, mobility, and confidence.
-      </p>
-    </div>
-  </section>
+  <main class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <img src="Alex.png" alt="Coach Alex pointing" class="alex-photo">
+      <div class="banner">
+        <h1>Better<br>Call</h1>
+        <h2>Alex</h2>
+        <p class="bio">
+          At <strong>60 years old</strong>, Coach Alex brings over <strong>25 years</strong> of expertise in fitness and wellness. 
+          His programs focus on <strong>nutrition, functional strength, flexibility, athletic development, and longevity.</strong> 
+          Train with Alex to build lasting health, mobility, and confidence.
+        </p>
+      </div>
+    </section>
 
-  <!-- LESSONS -->
-  <section class="lessons">
-    <div class="lesson-card">
-      <h3>Private Lessons</h3>
-      <table>
-        <thead><tr><th>Session</th><th>Price</th></tr></thead>
-        <tbody>
-          <tr><td>1-on-1 Training</td><td>$XX</td></tr>
-          <tr><td>10 Session Package</td><td>$XXX</td></tr>
-        </tbody>
-      </table>
-      <a href="#" class="book-btn">Book Now</a>
-    </div>
+    <!-- LESSONS -->
+    <section class="lessons">
+      <div class="lesson-card">
+        <h3>Private Lessons</h3>
+        <table>
+          <thead>
+            <tr><th>Session</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1-on-1 Training</td><td>$XX</td></tr>
+            <tr><td>10 Session Package</td><td>$XXX</td></tr>
+          </tbody>
+        </table>
+        <a href="#" class="book-btn">Book Now</a>
+      </div>
 
-    <div class="lesson-card">
-      <h3>Group Lessons</h3>
-      <table>
-        <thead><tr><th>Group Lessons</th><th>Price</th></tr></thead>
-        <tbody>
-          <tr><td>Small Group (2–4 people)</td><td>$XX</td></tr>
-          <tr><td>Large Group (5+ people)</td><td>$XX</td></tr>
-        </tbody>
-      </table>
-      <a href="#" class="book-btn">Book Now</a>
-    </div>
-  </section>
+      <div class="lesson-card">
+        <h3>Group Lessons</h3>
+        <table>
+          <thead>
+            <tr><th>Group Lessons</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Small Group (2–4 people)</td><td>$XX</td></tr>
+            <tr><td>Large Group (5+ people)</td><td>$XX</td></tr>
+          </tbody>
+        </table>
+        <a href="#" class="book-btn">Book Now</a>
+      </div>
+    </section>
 
-  <!-- CONTACT -->
-  <footer class="contact">
-    <a href="tel:4072020700">📞 407-202-0700</a>
-    <a href="mailto:alexfierce70@gmail.com">✉️ alexfierce70@gmail.com</a>
-    <a href="https://www.facebook.com/profile.php?id=61579629584120" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-           width="20" alt="Facebook" style="vertical-align:middle;margin-right:6px;">
-      FierceFitnessConcepts
-    </a>
-  </footer>
-</main>
+    <!-- CONTACT -->
+    <footer class="contact">
+      <a href="tel:4072020700">📞 407-202-0700</a>
+      <a href="mailto:alexfierce70@gmail.com">✉️ alexfierce70@gmail.com</a>
+      <a href="https://www.facebook.com/profile.php?id=61579629584120" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+             width="20" alt="Facebook" style="vertical-align:middle;margin-right:6px;">
+        FierceFitnessConcepts
+      </a>
+    </footer>
+  </main>
 </body>
 </html>
