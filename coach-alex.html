@@ -1,202 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Better Call Alex</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background: #fff;
-      color: #000;
-    }
+ @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-    .hero {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 30px;             /* controls space between Alex and text */
-  margin-left: 5%;       /* centers both on page */
-  margin-top: 20px;
-}
-.hero img {
-  width: 40%;
-  max-width: 250px;
-  height: auto;
-}
-.banner {
-  margin-left: -50px;
-}
-    .banner h1, .banner h2 {
-  font-family: 'Lobster', cursive; /* matches “Alex” style */
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.4); /* gives that depth */
-}
+body { font-family: Arial, sans-serif; margin: 0; background: #fff; color: #000; }
 
+/* --- HERO --- */
+.hero {
+  display: flex; align-items: flex-start; justify-content: flex-start;
+  gap: 40px; margin: 40px 5%;
+}
+.alex-photo {
+  width: 45%; max-width: 550px; height: auto;
+}
+.banner h1, .banner h2 {
+  font-family: 'Lobster', cursive; line-height: 1;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
 .banner h1 {
-  color: #FFD700; /* gold for “Better Call” */
-  font-size: 70px; /* larger for visibility */
-  line-height: 1.1;
-  transform: skew(-15deg);
-  margin-bottom: 10px;
+  color: #FFD700; font-size: 80px; transform: skew(-5deg);
 }
-
 .banner h2 {
-  color: #ff0000; /* red for Alex */
-  font-size: 110px; /* slightly oversized for drama */
-  transform: skew(-5deg);
-  margin-top: -10px;
+  color: #FF0000; font-size: 130px; transform: skew(-5deg);
+}
+.banner .bio {
+  font-size: 18px; line-height: 1.6; max-width: 520px; margin-top: 20px;
 }
 
-/* enlarge the entire banner container */
-.banner {
-  transform: translateX(20px);
-  scale: 1.2;
+/* --- LESSONS --- */
+.lessons {
+  display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+  margin: 60px auto; width: 90%;
+}
+.lesson-card {
+  background: #fff8dc; border: 2px solid #FFD700; border-radius: 10px;
+  padding: 20px; width: 340px; text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.lesson-card h3 { font-size: 22px; margin-bottom: 15px; }
+.lesson-card table {
+  width: 100%; border-collapse: collapse; margin-bottom: 15px;
+}
+.lesson-card th {
+  background: #FFD700; padding: 10px; font-weight: bold;
+}
+.lesson-card td {
+  padding: 10px; border-bottom: 1px solid #ddd;
+}
+.book-btn {
+  display: inline-block; background: #FF0000; color: #fff;
+  padding: 10px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;
+}
+.book-btn:hover { background: #cc0000; }
+
+/* --- CONTACT --- */
+.contact {
+  text-align: center; padding: 20px; margin-top: 40px;
+}
+.contact a {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #fff8dc; border: 1px solid #FFD700; border-radius: 8px;
+  padding: 10px 20px; margin: 5px; color: #000; text-decoration: none; font-weight: bold;
+}
+.contact a:hover {
+  background: #FFD700; color: #000;
 }
 
-    /* BIO */
-    .bio {
-      max-width: 700px;
-      font-size: 20px;
-      line-height: 1.6;
-      margin: 20px auto;
-      text-align: left;
-    }
-
-    /* PRICING */
-    .pricing {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin: 40px auto;
-      max-width: 1000px;
-    }
-    .card {
-      flex: 1;
-      min-width: 280px;
-      border: 2px solid #FFD700;
-      background: #fffbea;
-      border-radius: 10px;
-      text-align: center;
-      padding: 20px;
-    }
-    .card h3 {
-      background: #FFD700;
-      padding: 10px;
-      margin: 0 -20px 20px;
-      border-radius: 10px 10px 0 0;
-    }
-    .card table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-    .card table td {
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-    }
-    .card .book-now {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 25px;
-      font-size: 20px;
-      color: white;
-      background: red;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    /* CONTACT */
-    .contact {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 40px auto;
-      font-size: 18px;
-      flex-wrap: wrap;
-    }
-    .contact a {
-      text-decoration: none;
-      color: black;
-    }
-    .contact i {
-      margin-right: 8px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-      }
-      .banner h1 {
-        font-size: 60px;
-      }
-      .banner h2 {
-        font-size: 70px;
-      }
-      .bio {
-        font-size: 18px;
-        text-align: center;
-      }
-      .pricing {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; align-items: center; text-align: center; }
+  .alex-photo { width: 80%; max-width: 400px; }
+  .banner h1 { font-size: 60px; }
+  .banner h2 { font-size: 100px; }
+  .lessons { flex-direction: column; align-items: center; }
+}
 </head>
 <body>
-
+<main class="page">
   <!-- HERO -->
   <section class="hero">
-    <img src="Alex.png" alt="Coach Alex">
+    <img src="Alex.png" alt="Coach Alex pointing" class="alex-photo">
     <div class="banner">
       <h1>Better<br>Call</h1>
       <h2>Alex</h2>
+      <p class="bio">
+        At <strong>60 years old</strong>, Coach Alex brings over <strong>25 years</strong> of expertise in fitness and wellness.  
+        His programs focus on <strong>nutrition, functional strength, flexibility, athletic development, and longevity.</strong>  
+        Train with Alex to build lasting health, mobility, and confidence.
+      </p>
     </div>
   </section>
 
-  <!-- BIO -->
-  <div class="bio">
-    <p>Coach Alex brings over <strong>25 years</strong> of expertise in fitness and wellness. His programs focus on <strong>nutrition, functional strength, flexibility, athletic development,</strong> and <strong>longevity</strong>. Train with Alex to build lasting health, mobility, and confidence.</p>
-  </div>
-
-  <!-- PRICING -->
-  <div class="pricing">
-    <div class="card">
+  <!-- LESSONS -->
+  <section class="lessons">
+    <div class="lesson-card">
       <h3>Private Lessons</h3>
       <table>
-        <tr><td>1-on-1 Training</td><td>$XX</td></tr>
-        <tr><td>10 Session Package</td><td>$XXX</td></tr>
+        <thead><tr><th>Session</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>1-on-1 Training</td><td>$XX</td></tr>
+          <tr><td>10 Session Package</td><td>$XXX</td></tr>
+        </tbody>
       </table>
-      <a href="#" class="book-now">Book Now</a>
+      <a href="#" class="book-btn">Book Now</a>
     </div>
 
-    <div class="card">
+    <div class="lesson-card">
       <h3>Group Lessons</h3>
       <table>
-        <tr><td>Small Group (2–4 people)</td><td>$XX</td></tr>
-        <tr><td>Large Group (5+ people)</td><td>$XX</td></tr>
+        <thead><tr><th>Group Lessons</th><th>Price</th></tr></thead>
+        <tbody>
+          <tr><td>Small Group (2–4 people)</td><td>$XX</td></tr>
+          <tr><td>Large Group (5+ people)</td><td>$XX</td></tr>
+        </tbody>
       </table>
-      <a href="#" class="book-now">Book Now</a>
+      <a href="#" class="book-btn">Book Now</a>
     </div>
-  </div>
+  </section>
 
-<!-- CONTACT -->
-<div class="contact">
-  <a href="tel:4072020700">📞 407-202-0700</a>
-  <a href="mailto:alexfierce70@gmail.com">✉️ alexfierce70@gmail.com</a>
-  <a href="https://www.facebook.com/profile.php?id=61579629584120" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
-         alt="Facebook" 
-         width="20" 
-         style="vertical-align: middle; margin-right: 6px;">
-    FierceFitnessConcepts
-  </a>
-</div> 
-
+  <!-- CONTACT -->
+  <footer class="contact">
+    <a href="tel:4072020700">📞 407-202-0700</a>
+    <a href="mailto:alexfierce70@gmail.com">✉️ alexfierce70@gmail.com</a>
+    <a href="https://www.facebook.com/profile.php?id=61579629584120" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+           width="20" alt="Facebook" style="vertical-align:middle;margin-right:6px;">
+      FierceFitnessConcepts
+    </a>
+  </footer>
+</main>
 </body>
 </html>
